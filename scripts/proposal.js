@@ -4,14 +4,6 @@ const Web3 = require("web3");
 const MyToken = artifacts.require("MyToken");
 const MyGovernor = artifacts.require("MyGovernor");
 
-
-// Utils
-const ether = (n) => {
-  return new web3.utils.BN(
-    web3.utils.toWei(n.toString(), 'ether')
-  )
-}
-
 module.exports = async function(callback) {
 	
     const tokenAddress = MyToken.address;
